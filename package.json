@@ -1,6 +1,6 @@
 {
 	"name": "@pbrost-gral/tempa-xlsx",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"author": "sheetjs",
 	"description": "Excel (XLSB/XLSX/XLSM/XLS/XML) and ODS spreadsheet parser and writer (extended to enable read/write of cell formats with xlsx files)",
 	"keywords": [

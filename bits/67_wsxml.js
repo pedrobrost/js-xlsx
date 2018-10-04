@@ -407,7 +407,7 @@ function write_ws_xml(idx, opts, wb) {
   if (ws['!colBreaks'] !== undefined) o[o.length] = write_ws_xml_col_breaks(ws['!colBreaks']);
 
   if (wb.Headers[0] || wb.Footers[0]) {
-    o[o.length] = ('<headerFooter><oddHeader>&amp;R' + wb.Headers[0] || '' + '</oddHeader><oddFooter>&amp;R' + wb.Footers[0] || '' + '</oddFooter></headerFooter>');
+    o[o.length] = ('<headerFooter><oddHeader>&amp;R' + (wb.Headers[0] || '') + '</oddHeader><oddFooter>&amp;R' + (wb.Footers[0] || '') + '</oddFooter></headerFooter>');
   }
 
   if (o.length > 2) {
