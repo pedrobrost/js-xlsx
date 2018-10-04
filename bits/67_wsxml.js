@@ -406,7 +406,7 @@ function write_ws_xml(idx, opts, wb) {
   if (ws['!rowBreaks'] !== undefined) o[o.length] = write_ws_xml_row_breaks(ws['!rowBreaks']);
   if (ws['!colBreaks'] !== undefined) o[o.length] = write_ws_xml_col_breaks(ws['!colBreaks']);
 
-  o[o.length] = ('<headerFooter><oddHeader>&amp;R' + wb.Header + '</oddHeader><oddFooter>&amp;R' + wb.Footer + '</oddFooter></headerFooter>');
+  o[o.length] = ('<headerFooter><oddHeader>&amp;R' + wb.Headers[0] + '</oddHeader><oddFooter>&amp;R' + wb.Footers[0] + '</oddFooter></headerFooter>');
 
   if (o.length > 2) {
     o[o.length] = ('</worksheet>');
