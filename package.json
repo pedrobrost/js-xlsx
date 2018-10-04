@@ -1,6 +1,6 @@
 {
-	"name": "xlsx",
-	"version": "0.8.20",
+	"name": "@pbrost-gral/tempa-xlsx",
+	"version": "0.0.1",
 	"author": "sheetjs",
 	"description": "Excel (XLSB/XLSX/XLSM/XLS/XML) and ODS spreadsheet parser and writer (extended to enable read/write of cell formats with xlsx files)",
 	"keywords": [
@@ -34,7 +34,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:securedeveloper/js-xlsx.git"
+		"url": "git@github.com:pedrobrost/js-xlsx.git"
 	},
 	"scripts": {
 		"pretest": "git submodule init && git submodule update",
@@ -46,7 +46,7 @@
 		}
 	},
 	"bugs": {
-		"url": "https://github.com/securedeveloper/js-xlsx/issues"
+		"url": "https://github.com/pedrobrost/js-xlsx/issues"
 	},
 	"license": "Apache-2.0",
 	"engines": {
