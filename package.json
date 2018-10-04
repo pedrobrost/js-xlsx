@@ -30,7 +30,7 @@
 		"cheerio": "^0.19.0",
 		"mocha": "",
 		"xlsjs": "",
-		"uglify-js": ""
+		"uglify-js": "2.*"
 	},
 	"repository": {
 		"type": "git",
