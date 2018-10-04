@@ -4,7 +4,7 @@
 /*jshint funcscope:true, eqnull:true */
 var XLSX = {};
 (function make_xlsx(XLSX){
-XLSX.version = '0.8.20';
+XLSX.version = '0.0.1';
 var current_codepage = 1200, current_cptable;
 if(typeof module !== "undefined" && typeof require !== 'undefined') {
 	if(typeof cptable === 'undefined') cptable = require('./dist/cpexcel');
@@ -7944,7 +7944,9 @@ function write_ws_xml(idx, opts, wb) {
   if (ws['!rowBreaks'] !== undefined) o[o.length] = write_ws_xml_row_breaks(ws['!rowBreaks']);
   if (ws['!colBreaks'] !== undefined) o[o.length] = write_ws_xml_col_breaks(ws['!colBreaks']);
 
-  o[o.length] = ('<headerFooter><oddHeader>&amp;R' + wb.Headers[0] + '</oddHeader><oddFooter>&amp;R' + wb.Footers[0] + '</oddFooter></headerFooter>');
+  if (wb.Headers[0] || wb.Footers[0]) {
+    o[o.length] = ('<headerFooter><oddHeader>&amp;R' + wb.Headers[0] || '' + '</oddHeader><oddFooter>&amp;R' + wb.Footers[0] || '' + '</oddFooter></headerFooter>');
+  }
 
   if (o.length > 2) {
     o[o.length] = ('</worksheet>');
